@@ -9,10 +9,9 @@ public class Main {
 
         thread.setName("Misbehaving thread");
 
-        thread.setUncaughtExceptionHandler((t, e) -> {
-            System.out.println("A critical error happened in thread " + t.getName()
-            + " the error is " + e.getMessage());
-        });
+        thread.setUncaughtExceptionHandler((t, e) ->
+                System.out.println("A critical error happened in thread " + t.getName()
+                        + " the error is " + e.getMessage()));
 
         thread.start();
     }
