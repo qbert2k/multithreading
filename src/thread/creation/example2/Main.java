@@ -1,6 +1,6 @@
-package thread.creation.example;
+package thread.creation.example2;
 
-public class Main2 {
+public class Main {
 
     public static void main(String[] args) {
         Thread thread = new Thread(() -> {
