@@ -1,4 +1,4 @@
-package thread.creation.example;
+package thread.creation.example1;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
