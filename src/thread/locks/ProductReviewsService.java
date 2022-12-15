@@ -7,12 +7,9 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class ProductReviewsService {
     private final HashMap<Integer, List<String>> productIdToReviews;
 
-    // Create your member variables here
     private final ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();
     private final Lock readLock = reentrantReadWriteLock.readLock();
     private final Lock writeLock = reentrantReadWriteLock.writeLock();
-
-    /********* DO NOT MODIFY THIS SECTION **************/
 
     public ProductReviewsService() {
         this.productIdToReviews = new HashMap<>();
@@ -133,9 +130,6 @@ public class ProductReviewsService {
             lock.unlock();
         }
     }
-
-    /********* END OF UNMODIFIABLE SECTION **************/
-
 
     Lock getLockForAddProduct() {
         return writeLock;
